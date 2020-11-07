@@ -2,6 +2,8 @@
 #define TABLE_H
 
 #include <QWidget>
+#include <QPixmap>
+#include <QPainter>
 
 namespace Ui {
 class Table;
@@ -15,8 +17,11 @@ public:
     explicit Table(QWidget *parent = nullptr);
     ~Table();
 
+    void paintEvent(QPaintEvent * event) override;
+
 private:
     Ui::Table *ui;
+    QPixmap Watame;
 };
 
 #endif // TABLE_H
