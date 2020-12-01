@@ -4,6 +4,10 @@
 #include <QWidget>
 #include <QPixmap>
 #include <QPainter>
+#include <memory>
+#include <pawn.h>
+#include <QtWidgets>
+
 
 namespace Ui {
 class Table;
@@ -22,6 +26,12 @@ public:
 private:
     Ui::Table *ui;
     QPixmap Watame;
+    std::unique_ptr<Piece> peon;
+
+    void mousePressEvent(QMouseEvent *event) override;
+    void dragEnterEvent(QDragEnterEvent *event) override;
+    void dragMoveEvent(QDragMoveEvent *event) override;
+    void dropEvent(QDropEvent *event) override;
 };
 
 #endif // TABLE_H

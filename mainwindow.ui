@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>771</width>
-    <height>480</height>
+    <height>562</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -15,7 +15,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QHBoxLayout" name="horizontalLayout">
-    <item>
+    <item alignment="Qt::AlignHCenter">
      <widget class="QWidget" name="izquierda" native="true">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
@@ -24,10 +24,10 @@
        </sizepolicy>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
-       <item>
+       <item alignment="Qt::AlignTop">
         <widget class="QLabel" name="label_2">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Negras</string>
          </property>
         </widget>
        </item>
@@ -59,10 +59,10 @@
        </sizepolicy>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
-       <item>
+       <item alignment="Qt::AlignHCenter|Qt::AlignTop">
         <widget class="QLabel" name="label_3">
          <property name="text">
-          <string>TextLabel</string>
+          <string>Blancas</string>
          </property>
         </widget>
        </item>

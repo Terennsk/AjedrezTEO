@@ -33,9 +33,6 @@ if(ANDROID)
     mainwindow.cpp
     mainwindow.h
     mainwindow.ui
-    table.h
-    table.cpp
-    table.ui
   )
 else()
   add_executable(Chess
@@ -46,6 +43,10 @@ else()
     table.h
     table.cpp
     table.ui
+    piece.h
+    piece.cpp
+    pawn.cpp
+    pawn.h
   )
 endif()
 
