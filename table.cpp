@@ -7,12 +7,13 @@ Table::Table(QWidget *parent) :
 {
     ui->setupUi(this);
     setAcceptDrops(true);
-    Watame.load("/home/teren/AjedrezTEO/a.jpg");
+    Watame.load("/home/teren/Downloads/AjedrezTEO-main/a.jpg");
 
     peon = std::make_unique<Pawn>(this);
 
-    peon ->move(180,200);
+    peon ->move(0,0);
     peon ->show();
+    drawBoxes();
 }
 
 Table::~Table()
@@ -25,7 +26,17 @@ void Table::paintEvent(QPaintEvent *){
     QPainter painter(this);
     painter.drawPixmap(0,0,width(),height(),Watame);
 }
-//agarrar y soltar
+void Table::drawBoxes(){
+    for(int i=0; i<8; i++){
+        for(int j=0; j<8; j++){
+            hueco *hoyo=new hueco(this);
+            matriz[i][j]=hoyo;
+            hoyo->move(62*j,62*i);
+            hoyo->show();
+        }
+    }
+}
+/*//agarrar y soltar
 void Table::mousePressEvent(QMouseEvent *event){
     auto child = childAt(event->pos());
     if(child==nullptr){
@@ -84,4 +95,4 @@ void Table::dropEvent(QDropEvent *event){
     }else{
         event->ignore();
     }
-}
+}*/

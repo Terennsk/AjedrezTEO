@@ -7,6 +7,7 @@
 #include <memory>
 #include <pawn.h>
 #include <QtWidgets>
+#include <hueco.h>
 
 
 namespace Ui {
@@ -22,16 +23,17 @@ public:
     ~Table();
 
     void paintEvent(QPaintEvent * event) override;
-
+    void drawBoxes();
 private:
     Ui::Table *ui;
     QPixmap Watame;
     std::unique_ptr<Piece> peon;
+    hueco* matriz[8][8];
 
-    void mousePressEvent(QMouseEvent *event) override;
+    /*void mousePressEvent(QMouseEvent *event) override;
     void dragEnterEvent(QDragEnterEvent *event) override;
     void dragMoveEvent(QDragMoveEvent *event) override;
-    void dropEvent(QDropEvent *event) override;
+    void dropEvent(QDropEvent *event) override;*/
 };
 
 #endif // TABLE_H
