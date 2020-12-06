@@ -43,6 +43,7 @@ else()
     table.h
     table.cpp
     table.ui
+    hueco.ui
     piece.h
     piece.cpp
     pawn.cpp
