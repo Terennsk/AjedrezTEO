@@ -7,8 +7,7 @@ Game::Game(QWidget *parent ):QGraphicsView(parent)
 
     gameScene = new QGraphicsScene();
     gameScene->setSceneRect(0,0,1400,900);
-
-    setFixedSize(1400,900);
+    setFixedSize(1400,600);
     setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
     setScene(gameScene);
